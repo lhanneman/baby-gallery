@@ -38,3 +38,10 @@ nav > span {
     border-radius: 3px;
 }
 
+.rocket-icon { 
+    vertical-align: middle;
+    position: absolute;
+    left: 10px;
+    top: 13px;
+}
+
