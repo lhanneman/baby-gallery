@@ -1,0 +1,40 @@
+img { max-width: 100%; }
+.img-wrapper { border: 1px solid #fff; margin-bottom: 15px; }
+.thumbnails > .img-wrapper { 
+    max-width: 20%; 
+    float: left;
+    margin-left: 15px;
+}
+
+nav { 
+    font-family: 'Amatic SC', cursive; 
+    color: #5bc0de;
+    text-align: center;
+    position: relative;
+    height: 75px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+nav > span {
+    font-size: 3em;
+}
+
+.switch-view {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+
+.icon-wrapper {
+    padding: 3px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.icon-wrapper.selected {
+    border: 1px solid #5bc0de;
+    border-radius: 3px;
+}
+

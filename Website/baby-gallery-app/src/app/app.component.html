@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<nav>
+  <span>landon august</span>
+
+  <div class="switch-view">
+    <div class="icon-wrapper" [class.selected]="listView" (click)="toggleView()">
+      <i class="fa fa-list fa-lg" aria-hidden="true"></i>
+    </div>
+    <div class="icon-wrapper" [class.selected]="!listView" (click)="toggleView()">
+      <i class="fa fa-th fa-lg" aria-hidden="true"></i>
+    </div>
+  </div>
+</nav>
+
+<div class="container" [class.thumbnails]="!listView">
+  <div class="img-wrapper" *ngFor="let image of images">
+    <img src="{{ image.url }}" />
+  </div>
+</div>
