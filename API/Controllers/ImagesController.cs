@@ -5,11 +5,10 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using API.Models;
 using Newtonsoft.Json;
-using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
-    [EnableCors(origins: "http://landon-site.azurewebsites.net/", headers: "*", methods: "*")]
+    
     public class ImagesController : ApiController
     {
         public string Get()
