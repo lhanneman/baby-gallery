@@ -13,13 +13,14 @@ import { Observable } from 'rxjs/Observable';
 export class AppComponent implements OnInit {
   title = 'app works!';
   images: ImageModel[];
-  listView = false;
+  listView = true;
 
   constructor(private service: ImagesService)  {
 
   } 
 
   ngOnInit() {
+    this.images = new Array<ImageModel>();
     this.service.getImages().subscribe(imgs => this.images = imgs);
   }
 

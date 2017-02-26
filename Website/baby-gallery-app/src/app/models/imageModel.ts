@@ -1,3 +1,7 @@
 export class ImageModel {
-    url: string;
+    Url: string;
+
+    constructor() {
+        this.Url = '';
+    }
 }
