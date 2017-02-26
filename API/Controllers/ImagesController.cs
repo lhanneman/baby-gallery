@@ -11,7 +11,7 @@ namespace API.Controllers
     
     public class ImagesController : ApiController
     {
-        public string Get()
+        public List<ImageModel> Get()
         {
             // Parse the connection string and return a reference to the storage account.
             var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
@@ -36,7 +36,7 @@ namespace API.Controllers
                 }
             }
 
-            return JsonConvert.SerializeObject(images);
+            return images;
         }
     }
 }
