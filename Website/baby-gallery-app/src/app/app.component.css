@@ -1,5 +1,28 @@
-img { max-width: 100%; }
-.img-wrapper { border: 1px solid #fff; margin-bottom: 15px; }
+.container {
+    text-align: center;
+}
+
+img { 
+    max-width: 100%; 
+    border: 1px solid #fff; 
+}
+
+.img-wrapper { 
+    margin-bottom: 15px;
+    display: block;
+}
+
+.img-wrapper > img + label {
+    font-family: 'Amatic SC', cursive;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.4em;
+    line-height: 0.9em;
+    margin-top: 5px;
+    display: block;
+    margin-bottom: 25px;
+} 
+
 .thumbnails > .img-wrapper { 
     max-width: 20%; 
     float: left;

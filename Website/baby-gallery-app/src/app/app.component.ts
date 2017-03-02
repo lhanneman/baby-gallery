@@ -13,6 +13,7 @@ import { Observable } from 'rxjs/Observable';
 export class AppComponent implements OnInit {
   title = 'app works!';
   images: ImageModel[];
+  thumbnails: ImageModel[];
   listView = true;
 
   constructor(private service: ImagesService)  {
@@ -21,7 +22,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.images = new Array<ImageModel>();
-    this.service.getImages().subscribe(imgs => this.images = imgs);
+    this.service.getImages().subscribe(imgs => {
+      this.images = imgs.filter(img => img.Url.indexOf('thumb_') === -1);
+      this.thumbnails = imgs.filter(img => img.Url.indexOf('thumb_') !== -1);
+    });
   }
 
   toggleView() {
