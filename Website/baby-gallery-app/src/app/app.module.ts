@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 
 import { ImagesService } from './services/images.service';
 
+import { LazyLoadImageModule } from 'ng2-lazyload-image';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +16,8 @@ import { ImagesService } from './services/images.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    LazyLoadImageModule
   ],
   exports: [
     HttpModule
